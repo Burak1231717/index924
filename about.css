@@ -1,0 +1,615 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: #f2f3f4;
+}
+
+/* NAVBAR START */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 8%;
+  padding-top: 0.8rem;
+}
+
+.navbar img {
+  width: 12rem;
+}
+
+ul {
+  padding-top: 7rem;
+  padding-right: 8rem;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 4rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.5s;
+}
+
+ul li a::after {
+  content: "";
+  background-color: #dc7633;
+  display: block;
+  width: 0;
+  height: 1px;
+  transition: 1s;
+  margin: auto;
+}
+
+ul li a:hover::after {
+  width: 100%;
+}
+
+ul li a:hover {
+  color: #dc7633;
+}
+
+#active {
+  color: #dc7633;
+}
+
+/* From Uiverse.io by JulanDeAlb */
+.hamburger {
+  cursor: pointer;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  display: none;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 5em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+/* HAMBURGER END  */
+
+@media screen and (max-width:700px){
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .hamburger {
+      display: block;
+      z-index: 2;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0;
+      width: 100%;
+    }
+
+    .navbar img {
+      width: 12rem;
+      padding-top: 10%;
+      margin-left: 20%;
+    }
+
+  .navlinks {
+    position: absolute;
+    background-color: rgba(4, 9, 30, 0.7);
+    backdrop-filter: blur(7px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    margin-left: -100%;
+    transition: 0.5s all ease;
+  }
+
+  .navlinks.mobile-menu {
+    margin-left: 0;
+  }
+
+  ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0;
+  }
+
+  ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 2.5rem 0;
+    padding-right: 0;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    transition: 0.5s;
+  }
+
+  ul li a::after {
+    content: "";
+    background-color: #dc7633;
+    display: block;
+    width: 0;
+    height: 1px;
+    transition: 1s;
+    margin: auto;
+  }
+
+  ul li a:hover::after {
+    width: 100%;
+  }
+
+  #active {
+    color: #dc7633;
+  }
+
+  ul li a:hover {
+    color: #dc7633;
+  }
+}
+
+/* NAVBAR END */
+
+/* İLETİŞİM START */
+
+#cizgili-baslik {
+  display: flex;
+  align-items: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: black;
+  gap: 2rem;
+  padding-top: 6rem;
+  padding-left: 39rem;
+}
+
+#cizgili-baslik::before,
+#cizgili-baslik::after {
+  content: "";
+  flex: 0.3;
+  height: 2px;
+  background-color: #dc7633;
+}
+
+.baslik p {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.baslik {
+  font-family: "Raleway", sans-serif;
+}
+
+.cardlar {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Raleway", sans-serif;
+  padding: 4% 4%;
+}
+
+.card {
+  width: 25%;
+  text-align: center;
+  transition: 0.5s;
+  padding: 2% 1%;
+}
+
+.card:hover {
+  border-radius: 3rem;
+  background: white ;
+  /* box-shadow: 1.5rem 1rem 2rem rgb(255, 255, 255),
+    -1rem -1rem 3rem rgb(255, 255, 255); */
+}
+
+.card p {
+  font-size: 1.8rem;
+  padding-top: 1rem;
+  color: black;
+}
+
+.card a {
+  font-size: 1.8rem;
+  padding-top: 1rem;
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+}
+
+.card a:hover {
+  color: #dc7633;
+}
+
+.card h1 {
+  font-size: 2.7rem;
+  padding-top: 1rem;
+  color: black;
+}
+
+.card i {
+  font-size: 4rem;
+  color: #dc7633;
+}
+
+.map {
+  padding-left: 10rem;
+  padding-bottom: 10rem;
+}
+
+.map {
+  display: flex;
+  color: #dc7633;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.map h1{
+  font-size: 6rem;
+}
+
+.map p{
+  font-size: 2.2rem;
+  padding-top: 2rem;
+  color: #616379;
+}
+
+.map-text{
+  padding-right: 5rem;
+  padding-top: 7rem;
+}
+
+#map1{
+  padding-right: 5rem;
+}
+
+@media screen and (max-width:700px){
+  #cizgili-baslik {
+  display: flex;
+  align-items: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: black;
+  gap: 2rem;
+  padding-top: 10%;
+  padding-left: 0rem;
+  justify-content: center;
+
+}
+
+#cizgili-baslik::before,
+#cizgili-baslik::after {
+  content: "";
+  flex: 0.4;
+  height: 2px;
+  background-color: #dc7633;
+}
+
+.baslik p {
+  padding-top: 2rem;
+    font-size: 1.8rem;
+    padding-bottom: 2rem;
+    width: 90%;
+    padding-left: 14%;
+}
+
+.baslik {
+  font-family: "Raleway", sans-serif;
+}
+
+.cardlar {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Raleway", sans-serif;
+  padding: 20% 4%;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.card {
+  width: 90%;
+  text-align: center;
+  transition: 0.5s;
+  padding: 2% 1%;
+  align-self: center;
+}
+
+.card:hover {
+  border-radius: 3rem;
+  background: white ;
+  /* box-shadow: 1.5rem 1rem 2rem rgb(255, 255, 255),
+    -1rem -1rem 3rem rgb(255, 255, 255); */
+}
+
+.card p {
+  font-size: 1.8rem;
+  padding-top: 1rem;
+  color: black;
+}
+
+.card a {
+  font-size: 1.8rem;
+  padding-top: 1rem;
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+}
+
+.card a:hover {
+  color: #dc7633;
+}
+
+.card h1 {
+  font-size: 2.7rem;
+  padding-top: 1rem;
+  color: black;
+}
+
+.card i {
+  font-size: 4rem;
+  color: #dc7633;
+}
+
+.map {
+  padding-left: 0rem;
+  padding-bottom: 10rem;
+}
+
+.map {
+  display: flex;
+  color: #dc7633;
+  font-family: "Montserrat", sans-serif;
+flex-direction: column;
+}
+
+.map h1{
+  font-size: 4rem;
+
+}
+
+.map p{
+  font-size: 2rem;
+  padding-top: 2rem;
+  color: #616379;
+}
+
+.map-text{
+  padding-right: 0rem;
+  padding-top: 0rem;
+  padding-left: 6%;
+  padding-bottom: 10%;
+}
+
+#map1{
+  padding-right: 0rem;
+  width: 90%;
+  height: 30rem;
+  align-self: center;
+}
+}
+
+/* İLETİŞİM END */
+
+/*FOOTER START */
+
+.boxlar {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 4% 4%;
+  gap: rem;
+}
+
+.box img {
+  width: 13rem;
+  padding-left: 2rem;
+}
+
+.box h1 {
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 2rem;
+  font-size: 2.3rem;
+}
+
+.box p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  padding-bottom: 0.8rem;
+  color: #616379;
+}
+
+.box a {
+  text-decoration: none;
+  color: white;
+  color: #616379;
+  transition: 0.5s;
+}
+
+.box a:hover {
+  color: #dc7633;
+}
+
+.box {
+  width: 20%;
+}
+
+#box-i {
+  padding-right: 5rem;
+  width: 35%;
+}
+#box-çs {
+  padding-right: 5rem;
+}
+
+#box-nav {
+  padding-left: 6rem;
+}
+
+#mail {
+  padding-left: 1rem;
+}
+
+#tel {
+  padding-left: 1rem;
+}
+
+#adres {
+  padding-left: 2rem;
+}
+
+#adres1 {
+  padding-left: 6.5rem;
+}
+
+#saat1 {
+  padding-left: 2.8rem;
+}
+
+#saat2 {
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .boxlar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .box img {
+    width: 100%;
+    max-width: 12rem;
+  }
+
+  .box h1 {
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 0rem;
+    font-size: 1.8rem;
+  }
+
+  .box p {
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    padding-bottom: 0.5rem;
+    color: #616379;
+  }
+
+  .box a {
+    text-decoration: none;
+    color: white;
+    color: #616379;
+    transition: 0.5s;
+  }
+
+  .box a:hover {
+    color: #dc7633;
+  }
+
+  .boxlar .box:first-child,
+  .boxlar .box:nth-child(2) {
+    width: 45%; /* İlk iki kutu yan yana */
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  #box-i {
+    padding-right: 0rem;
+    width: 100%;
+  }
+
+  #box-çs {
+    padding-right: 0rem;
+  }
+
+  #box-nav {
+    padding-left: 1rem;
+  }
+
+  #mail {
+    padding-left: 1rem;
+  }
+
+  #tel {
+    padding-left: 1rem;
+  }
+
+  #adres {
+    padding-left: 2rem;
+  }
+
+  #adres1 {
+    padding-left: 6.5rem;
+  }
+
+  #saat1 {
+    padding-left: 2.8rem;
+  }
+
+  #saat2 {
+    padding-left: 1rem;
+  }
+}
+
+/* FOOTER END */
+
+

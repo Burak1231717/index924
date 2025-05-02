@@ -1,0 +1,66 @@
+.kalite {
+  padding: 4rem 2rem;
+  background-color: white;
+}
+
+.kalite-sag h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #131022;
+}
+
+.kalite-sag p {
+  font-size: 1.2rem;
+  color: #616379;
+  margin-top: 1rem;
+}
+
+.checkler {
+  margin-top: 2rem;
+}
+
+.tickler {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.tick {
+  display: flex;
+  align-items: center;
+}
+
+.tick i {
+  font-size: 2rem;
+  color: #7aa1d3;
+  margin-right: 1rem;
+}
+
+.tick p {
+  color: #0c2271;
+}
+
+.resimler {
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resim {
+  width: 250px;
+  border-radius: 3rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+#resim1 {
+  z-index: 1;
+  transform: translateX(-30px);
+}
+
+#resim2 {
+  z-index: 2;
+  transform: translateX(30px);
+  margin-left: -100px;
+}
